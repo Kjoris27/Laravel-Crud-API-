@@ -25,3 +25,7 @@ Route::get('testing', function (){
 Route::post('add-product', [\App\Http\Controllers\ProductsController::class, 'adding']);
 
 Route::put('edit-product', [\App\Http\Controllers\ProductsController::class,'edit']);
+
+Route::delete('delete-product', [\App\Http\Controllers\ProductsController::class, 'delete']);
+
+Route::get('get-products', [\App\Http\Controllers\ProductsController::class, 'getdata']);

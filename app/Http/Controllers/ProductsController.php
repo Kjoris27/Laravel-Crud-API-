@@ -31,7 +31,21 @@ class ProductsController extends Controller
 
         return response()->json('Updated successfully');
 
+    }
+
+    public function delete(Request $request) {
+        $items = Products::findorfail($request->id)->delete();
+
+        return response()->json('Deleted successfully');
+    }
+
+    public function getdata()
+    {
+        $items = Products::all();
+
+        return response()->json($items);
 
     }
+
 
 }
