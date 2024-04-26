@@ -23,3 +23,5 @@ Route::get('testing', function (){
 });
 
 Route::post('add-product', [\App\Http\Controllers\ProductsController::class, 'adding']);
+
+Route::put('edit-product', [\App\Http\Controllers\ProductsController::class,'edit']);

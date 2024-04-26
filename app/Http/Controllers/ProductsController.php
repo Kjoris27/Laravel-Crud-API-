@@ -19,4 +19,19 @@ class ProductsController extends Controller
         return response()->json('Added successfully');
 
     }
+
+    public function edit(Request $request) {
+        $items = Products::findorfail($request->id);
+
+        $items->name = $request->name;
+        $items->value = $request->value;
+        $items->quantity = $request->quantity;
+
+        $items->update();
+
+        return response()->json('Updated successfully');
+
+
+    }
+
 }
